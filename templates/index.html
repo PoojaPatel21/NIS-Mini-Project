@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Store Homepage{% endblock %}
+
+{% block content %}
+<style>
+    .my_div{
+    background-color: aliceblue;	
+	border: 1px solid black;
+	opacity: 0.9;	
+    }
+</style>
+<div id="content" class="my_div">
+
+<br><br>
+
+<h1>Welcome To Namastey Online Store</h1>
+<h2>Unprotected Search For An Item</h2><br>
+
+<form action="?" method="GET" onsubmit="search();return false;">
+	<input type="text" id="searchItem" value=""/>
+	<input class="btn btn-primary btn-dark" type="submit" value="Search" />
+</form>
+
+<br><br>
+
+<table id="results">
+<tr>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+</tr>
+</table>
+<br><br>
+<h2>Protected Search For An Item</h2><br>
+
+<form action="?" method="GET" onsubmit="search();return false;">
+	<input type="text" id="searchItem" value=""/>
+	<input class="btn btn-primary btn-dark" type="submit" value="Search" />
+</form>
+
+<br><br>
+
+<table id="results">
+<tr>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+</tr>
+</table>
+
+
+<p id="stat"></p>
+
+</div>
+{% endblock %}
