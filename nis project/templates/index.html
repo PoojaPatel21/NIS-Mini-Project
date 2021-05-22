@@ -5,9 +5,14 @@
 {% block content %}
 <style>
     .my_div{
-    background-color: aliceblue;	
+    background-color: ivory;	
 	border: 1px solid black;
 	opacity: 0.9;	
+    }
+    .style1{
+        align-self: center;
+        position: absolute;
+        left: 20%;
     }
 </style>
 <div id="content" class="my_div">
@@ -24,7 +29,7 @@
 
 <br><br>
 
-<table id="results">
+<table id="results" class="style1">
 <tr>
     <th>Name</th>
     <th>Quantity</th>
@@ -34,20 +39,13 @@
 <br><br>
 <h2>Protected Search For An Item</h2><br>
 
-<form action="?" method="GET" onsubmit="search();return false;">
-	<input type="text" id="searchItem" value=""/>
-	<input class="btn btn-primary btn-dark" type="submit" value="Search" />
+<form action="?" method="GET" onsubmit="searchProtected();return false;">
+	<input type="text" id="searchItem1" value=""/>
+	<input class="btn btn-primary btn-dark" type="submit" value="ProtectedSearch" />
 </form>
 
 <br><br>
 
-<table id="results">
-<tr>
-    <th>Name</th>
-    <th>Quantity</th>
-    <th>Price</th>
-</tr>
-</table>
 
 
 <p id="stat"></p>

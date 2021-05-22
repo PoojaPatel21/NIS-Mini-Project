@@ -31,7 +31,7 @@ function loginProtected(){
 
     var dat = {'username':uname, 'password':passw};
 
-    $.ajax('/api/v1.0/storeLoginAPI/',{
+    $.ajax('/api/v1.0/storeLoginProtectedAPI/',{
         method: 'POST',
         data: JSON.stringify(dat),
         dataType: "json",
@@ -58,7 +58,7 @@ function search(){
     }).done(function(res){
 
         $(".res").remove(); //remove previous results
-
+       
         $(res).each(function(){
             var r = "<tr class='res'><td>"+this['name']+"</td>";
             r += "<td>"+this['quantity']+"</td>";
@@ -68,6 +68,31 @@ function search(){
 
     }).fail(function(err){
         $("#stat").html(err);
+    });
+}
+
+function searchProtected(){
+    var item = document.getElementById("searchItem1").value;
+
+    $.ajax('/api/v1.0/storeProtectedAPI/'+item,{
+        method: 'GET',
+    }).done(function(res){
+
+        
+          $(".res").remove(); //remove previous results
+
+        $(res).each(function(){
+            //  if(string(this['name'])!="undefined"){
+                console.log("Loser");
+            var r = "<tr class='res'><td>"+this['name']+"</td>";
+            r += "<td>"+this['quantity']+"</td>";
+            r += "<td>"+this['price']+"</td></tr>";
+            $("#results").append(r);
+            //  }
+        });
+
+    }).fail(function(err){
+        $("#stat").html(err); 
     });
 }
 

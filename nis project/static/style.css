@@ -4,7 +4,7 @@ table, th, td {
 }
 
 .button{
-    background-color: blue;
+    background-color: black;
     color: white;
     border: none;
     height: 25px;
@@ -16,13 +16,13 @@ table, th, td {
     margin: auto;
     width: 1000px;
     text-align: center;
-    border: 2px solid blue;
+    border: 2px solid black;
     padding-bottom: 30px;
 }
 
 table{
-    margin-left: center;
-    margin-right: center;
+    margin-left: centre;
+    margin-right: centre;
     width: 50%;
 }
 
@@ -37,7 +37,7 @@ table{
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: blue;
+    background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
